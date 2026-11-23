@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% capture t %}{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% assign d = page.description | default: site.tagline %}
+<title>{{ t | strip }}</title>
+<meta name="description" content="{{ d | strip_html | escape }}">
+<meta property="og:title" content="{% if page.collection == 'prompts' %}Prompt · {{ page.title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{{ d | strip_html | escape }}">
+<meta property="og:image" content="{{ '/assets/avatar.png' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">

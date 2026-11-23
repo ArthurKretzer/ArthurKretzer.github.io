@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs></defs>
+  <rect width="32" height="32" rx="16" fill="#1A1A1A"></rect>
+  <text x="16" y="20.5" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, Menlo, monospace" font-size="11" font-weight="600" letter-spacing="-0.4"><tspan fill="#D9433B">[</tspan><tspan fill="#EDEDED">A</tspan><tspan fill="#3FBFA3">]</tspan></text>
+</svg>

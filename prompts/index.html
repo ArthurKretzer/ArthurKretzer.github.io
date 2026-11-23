@@ -1,0 +1,13 @@
+---
+layout: base
+title: Prompts
+description: Os prompts que aparecem nos vídeos, prontos para copiar.
+---
+<div class="tag">Prompts dos vídeos</div>
+<h1>Prompts</h1>
+<p class="lead">{{ page.description }}</p>
+<nav class="links">
+{% assign prompts = site.prompts | sort: 'date' | reverse %}
+{% for p in prompts %}<a class="card" href="{{ p.url | relative_url }}"><strong>{{ p.title }}</strong><span class="sub">{% if p.video %}"{{ p.video }}" · {% endif %}{{ p.date | date: "%d/%m/%Y" }}</span></a>
+{% endfor %}
+</nav>

@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>{% include head.html %}</head>
+<body class="{{ layout.body_class }}{{ page.body_class }}">
+<main>
+{{ content }}
+<footer><a href="{{ '/' | relative_url }}">{{ site.title }}</a> · <a href="{{ '/prompts/' | relative_url }}">Todos os prompts</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+---
+layout: base
+body_class: has-bar
+---
+<div class="tag">Prompt{% if page.video %} · do vídeo "{{ page.video }}"{% endif %}</div>
+<h1>{{ page.title }}</h1>
+<p class="lead">{{ page.description }}</p>
+{% if page.steps %}<ol class="steps">{% for s in page.steps %}<li>{{ s | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ol>{% endif %}
+<pre id="prompt">{{ page.prompt | strip | escape }}</pre>
+{{ content }}
+<div class="bar"><button id="copy" type="button">Copiar prompt</button></div>
+<script src="{{ '/assets/copy.js' | relative_url }}"></script>

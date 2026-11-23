@@ -1,0 +1,17 @@
+title: Arthur Kretzer
+tagline: AI Data Engineer mostrando IA aplicada de verdade, no trabalho e na vida.
+url: https://arthurkretzer.github.io
+lang: pt-BR
+collections:
+  prompts:
+    output: true
+    permalink: /prompts/:name/
+defaults:
+  - scope:
+      path: ""
+      type: prompts
+    values:
+      layout: prompt
+exclude:
+  - README.md
+  - MODELO.md

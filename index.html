@@ -1,0 +1,20 @@
+---
+layout: base
+body_class: home
+---
+<header class="hero">
+  <img src="{{ '/assets/avatar.png' | relative_url }}" alt="" width="88" height="88">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.tagline }}</p>
+</header>
+{% assign prompts = site.prompts | sort: 'date' | reverse %}
+{% if prompts.size > 0 %}{% assign novo = prompts.first %}
+<a class="card destaque" href="{{ novo.url | relative_url }}">
+  <span class="tag">Prompt do vídeo mais recente</span>
+  <strong>{{ novo.title }}</strong>
+  <span class="sub">{% if novo.video %}"{{ novo.video }}" · {% endif %}toque para copiar</span>
+</a>{% endif %}
+<nav class="links">
+{% for l in site.data.links %}<a class="card" href="{{ l.url }}" rel="me noopener"><strong>{{ l.label }}</strong>{% if l.sub %}<span class="sub">{{ l.sub }}</span>{% endif %}</a>
+{% endfor %}<a class="card" href="{{ '/prompts/' | relative_url }}"><strong>Todos os prompts</strong><span class="sub">{{ prompts.size }} {% if prompts.size == 1 %}prompt{% else %}prompts{% endif %} dos vídeos</span></a>
+</nav>

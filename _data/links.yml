@@ -1,0 +1,11 @@
+# Links da página inicial (bio do Instagram), na ordem em que aparecem.
+# Para esconder um link sem apagar, comente as linhas com #.
+- label: YouTube
+  sub: "@arthurkretzer-ia"
+  url: https://www.youtube.com/@arthurkretzer-ia
+- label: Instagram
+  sub: "@arthurkretzer.ia"
+  url: https://www.instagram.com/arthurkretzer.ia/
+# - label: LinkedIn
+#   sub: Arthur Kretzer
+#   url: https://www.linkedin.com/in/PREENCHER/
